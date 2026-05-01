@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#000000] text-[#FFFFFF] font-sans antialiased selection:bg-white selection:text-black overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+    @apply border border-white;
+  }
+  .strike-through {
+    text-decoration: line-through;
+  }
+  .transition-editorial {
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .vertical-axis {
+    @apply absolute right-[33.333%] top-0 bottom-0 w-[1px] bg-white opacity-10 hidden lg:block;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/20;
+  }
+}
